@@ -2,12 +2,16 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- کد تایید اختصاصی گوگل سرچ کنسول شما -->
+    <meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
+
     <title>میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</title>
     <meta name="description" content="میلاد یوسفی - مهندس راه‌اندازی بیسیم موتورولا، شبکه‌های رادیویی و سایت‌های تکرارکننده در قائمشهر، مازندران و سراسر ایران. همکاری با شرکت امیدان صنعت.">
     <meta name="keywords" content="مهندس بیسیم, راه اندازی بیسیم, مهندس راه اندازی بیسیم, راه اندازی بیسیم موتورولا, راه اندازی سایت بیسیم, شرکت امیدان صنعت, بیسیم مازندران, بیسیم قائمشهر, 09048818508">
     
-    <!-- فونت استاندارد و زیبای وزیرمتن -->
+    <!-- فونت وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 
     <style>
@@ -18,28 +22,30 @@
             --gold-primary: #f59e0b;
             --gold-light: #fbbf24;
             --gold-gradient: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fef08a 100%);
-            --blue-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             --text-main: #f8fafc;
             --text-sub: #94a3b8;
         }
 
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Vazirmatn', sans-serif;
         }
 
-        body {
+        /* جلوگیری قطعی از اسکرول افقی در گوشی */
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+            position: relative;
             background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.8;
-            overflow-x: hidden;
-            position: relative;
+            font-family: 'Vazirmatn', sans-serif;
             min-height: 100vh;
         }
 
-        /* --- پس‌زمینه زنده امواج رادیویی --- */
+        /* --- پس‌زمینه زنده امواج رادیویی (اصلاح‌شده برای موبایل) --- */
         .radio-waves-bg {
             position: fixed;
             top: 0;
@@ -49,28 +55,30 @@
             z-index: -1;
             background: radial-gradient(circle at 50% 15%, #0f1c3f 0%, #070a14 75%);
             overflow: hidden;
+            pointer-events: none;
         }
 
         .wave-line {
             position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             background: repeating-radial-gradient(
                 circle at 50% 30%,
                 transparent 0,
-                transparent 40px,
-                rgba(59, 130, 246, 0.05) 41px,
-                transparent 42px
+                transparent 30px,
+                rgba(59, 130, 246, 0.05) 31px,
+                transparent 32px
             );
             animation: wavePulse 12s infinite linear;
+            pointer-events: none;
         }
 
         @keyframes wavePulse {
-            0% { transform: scale(0.9); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.7; }
-            100% { transform: scale(0.9); opacity: 0.3; }
+            0% { transform: scale(0.95); opacity: 0.3; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+            100% { transform: scale(0.95); opacity: 0.3; }
         }
 
         /* --- هیرو / بالای سایت --- */
@@ -79,17 +87,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 70px 20px 40px;
+            padding: 60px 15px 30px;
             text-align: center;
             position: relative;
+            width: 100%;
         }
 
-        /* آیکون فرستنده رادیویی زنده (جایگزین عکس) */
         .antenna-container {
             position: relative;
-            width: 130px;
-            height: 130px;
-            margin-bottom: 25px;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -105,6 +113,7 @@
             border-radius: 50%;
             animation: ringExpand 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
             opacity: 0;
+            pointer-events: none;
         }
 
         .pulse-ring:nth-child(1) { animation-delay: 0s; }
@@ -112,50 +121,53 @@
         .pulse-ring:nth-child(3) { animation-delay: 2s; }
 
         @keyframes ringExpand {
-            0% { width: 130px; height: 130px; opacity: 0.8; border-color: var(--gold-primary); }
+            0% { width: 120px; height: 120px; opacity: 0.8; border-color: var(--gold-primary); }
             50% { border-color: var(--blue-glow); }
-            100% { width: 280px; height: 280px; opacity: 0; }
+            100% { width: 220px; height: 220px; opacity: 0; }
         }
 
         .antenna-icon {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             fill: url(#goldGradient);
             z-index: 2;
         }
 
         .hero h1 {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: 900;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         .hero h2 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: #e2e8f0;
             font-weight: 500;
             margin-bottom: 18px;
+            word-break: break-word;
         }
 
         .badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
+            max-width: 100%;
         }
 
         .badge {
             background: rgba(30, 58, 138, 0.4);
             border: 1px solid rgba(59, 130, 246, 0.4);
             color: #f1f5f9;
-            padding: 6px 18px;
+            padding: 6px 14px;
             border-radius: 30px;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             backdrop-filter: blur(8px);
+            max-width: 100%;
         }
 
         .badge.gold-badge {
@@ -168,117 +180,113 @@
         /* --- کانتینر محتوا --- */
         .container {
             max-width: 900px;
+            width: 100%;
             margin: 0 auto;
-            padding: 0 20px 40px;
+            padding: 0 15px 30px;
         }
 
         .card {
             background: var(--bg-card);
             border: 1px solid rgba(245, 158, 11, 0.25);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 25px;
+            border-radius: 18px;
+            padding: 26px 20px;
+            margin-bottom: 20px;
             backdrop-filter: blur(16px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--gold-primary);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
-            transform: translateY(-2px);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .card-title {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             color: var(--gold-light);
             border-right: 4px solid var(--gold-primary);
-            padding-right: 14px;
-            margin-bottom: 22px;
+            padding-right: 12px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            width: 100%;
         }
 
         .service-box {
             background: rgba(10, 15, 30, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 22px;
+            border-radius: 12px;
+            padding: 18px;
             border-right: 3px solid var(--blue-glow);
-            transition: border-color 0.3s ease;
-        }
-
-        .service-box:hover {
-            border-right-color: var(--gold-primary);
         }
 
         .service-box h4 {
             color: #ffffff;
-            font-size: 1.05rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .service-box p {
             color: var(--text-sub);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             line-height: 1.7;
         }
 
-        /* --- بخش دکمه تماس --- */
+        /* --- دکمه تماس --- */
         .cta-wrapper {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 25px;
+            width: 100%;
         }
 
         .btn-call {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            gap: 10px;
             background: var(--gold-gradient);
             color: #0d1322;
             font-weight: 800;
-            font-size: 1.2rem;
-            padding: 16px 45px;
+            font-size: 1.05rem;
+            padding: 14px 25px;
             border-radius: 50px;
             text-decoration: none;
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .btn-call:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 45px rgba(245, 158, 11, 0.7);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+            max-width: 100%;
+            text-align: center;
         }
 
         /* --- فوتر --- */
         footer {
             text-align: center;
-            padding: 35px 20px;
+            padding: 25px 15px;
             color: var(--text-sub);
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             background: rgba(5, 8, 16, 0.9);
+            width: 100%;
         }
 
         .seo-keywords {
-            margin-top: 18px;
-            font-size: 0.78rem;
+            margin-top: 15px;
+            font-size: 0.75rem;
             color: #64748b;
-            line-height: 2;
+            line-height: 1.8;
+            word-wrap: break-word;
         }
 
+        /* بهینه‌سازی مخصوص موبایل */
         @media (max-width: 600px) {
-            .hero h1 { font-size: 1.8rem; }
-            .hero h2 { font-size: 1.05rem; }
-            .card { padding: 22px; }
-            .btn-call { font-size: 1rem; padding: 14px 30px; }
+            .hero { padding: 40px 12px 20px; }
+            .hero h1 { font-size: 1.65rem; }
+            .hero h2 { font-size: 0.98rem; }
+            .card { padding: 20px 15px; border-radius: 14px; }
+            .card-title { font-size: 1.1rem; }
+            .btn-call { font-size: 0.92rem; padding: 12px 18px; width: 100%; }
+            .badge { font-size: 0.78rem; padding: 5px 10px; }
         }
     </style>
 </head>
@@ -289,14 +297,13 @@
         <div class="wave-line"></div>
     </div>
 
-    <!-- بخش هیرو (بالای سایت) -->
+    <!-- بخش هیرو -->
     <header class="hero">
         <div class="antenna-container">
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
             
-            <!-- آیکون وکتور موج رادیویی و آنتن -->
             <svg class="antenna-icon" viewBox="0 0 24 24">
                 <defs>
                     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -318,14 +325,14 @@
         </div>
     </header>
 
-    <!-- کانتینر اصلی محتوا -->
+    <!-- کانتینر اصلی -->
     <main class="container">
 
         <!-- درباره من -->
         <section class="card">
             <h3 class="card-title">👨‍💻 درباره من | بیوگرافی حرفه‌ای</h3>
             <p>
-                اینجانب <strong>میلاد یوسفی</strong>، **مهندس راه‌اندازی بیسیم** و متخصص طراحی، کانفیگ، نصب و راه‌اندازی شبکه‌های ارتباطی رادیویی با سال‌ها تجربه در پروژه‌های صنعتی، سازمانی و زیرساختی هستم. افتخار همکاری با **شرکت امیدان صنعت** را داشته و آماده ارائه خدمات تخصصی در استان مازندران (قائمشهر، ساری، بابل، آمل، چالوس و...) و تمامی استان‌های کشور می‌باشم.
+                اینجانب <strong>میلاد یوسفی</strong>، مهندس راه‌اندازی بیسیم و متخصص طراحی، کانفیگ، نصب و راه‌اندازی شبکه‌های ارتباطی رادیویی با سال‌ها تجربه در پروژه‌های صنعتی، سازمانی و زیرساختی هستم. افتخار همکاری با <strong>شرکت امیدان صنعت</strong> را داشته و آماده ارائه خدمات تخصصی در استان مازندران (قائمشهر، ساری، بابل، آمل، چالوس و...) و تمامی استان‌های کشور می‌باشم.
             </p>
         </section>
 
