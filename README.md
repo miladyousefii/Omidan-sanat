@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- کد تایید اختصاصی Google Search Console -->
+    <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
 
     <title>میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</title>
@@ -14,7 +14,7 @@
     <meta name="keywords" content="مهندس بیسیم, راه اندازی بیسیم, مهندس راه اندازی بیسیم, راه اندازی بیسیم موتورولا, راه اندازی سایت بیسیم, شرکت امیدان صنعت, بیسیم مازندران, بیسیم قائمشهر, 09048818508">
 
     <!-- فونت وزیرمتن -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css">
 
     <style>
         :root {
@@ -23,18 +23,26 @@
             --blue-glow: #3b82f6;
             --gold-primary: #f59e0b;
             --gold-light: #fbbf24;
-            --gold-gradient: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fef08a 100%);
+            --gold-gradient: linear-gradient(
+                135deg,
+                #d97706 0%,
+                #f59e0b 50%,
+                #fef08a 100%
+            );
             --text-main: #f8fafc;
             --text-sub: #94a3b8;
         }
 
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             max-width: 100%;
             overflow-x: hidden !important;
@@ -46,7 +54,7 @@
             min-height: 100vh;
         }
 
-        /* --- پس‌زمینه امواج رادیویی --- */
+        /* پس‌زمینه امواج رادیویی */
         .radio-waves-bg {
             position: fixed;
             top: 0;
@@ -54,7 +62,11 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(circle at 50% 15%, #0f1c3f 0%, #070a14 75%);
+            background: radial-gradient(
+                circle at 50% 15%,
+                #0f1c3f 0%,
+                #070a14 75%
+            );
             overflow: hidden;
             pointer-events: none;
         }
@@ -93,7 +105,7 @@
             }
         }
 
-        /* --- هیرو / بالای سایت --- */
+        /* هیرو */
         .hero {
             display: flex;
             flex-direction: column;
@@ -125,7 +137,8 @@
             position: absolute;
             border: 2px solid var(--gold-primary);
             border-radius: 50%;
-            animation: ringExpand 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation: ringExpand 3s infinite
+                cubic-bezier(0.215, 0.61, 0.355, 1);
             opacity: 0;
             pointer-events: none;
         }
@@ -212,7 +225,7 @@
             font-weight: 600;
         }
 
-        /* --- کانتینر محتوا --- */
+        /* کانتینر */
         .container {
             max-width: 900px;
             width: 100%;
@@ -245,7 +258,10 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
             gap: 15px;
             width: 100%;
         }
@@ -270,7 +286,7 @@
             line-height: 1.7;
         }
 
-        /* --- دکمه تماس --- */
+        /* دکمه تماس */
         .cta-wrapper {
             text-align: center;
             margin-top: 25px;
@@ -294,7 +310,7 @@
             text-align: center;
         }
 
-        /* --- فوتر --- */
+        /* فوتر */
         footer {
             text-align: center;
             padding: 25px 15px;
@@ -313,8 +329,9 @@
             word-wrap: break-word;
         }
 
-        /* --- بهینه‌سازی موبایل --- */
+        /* موبایل */
         @media (max-width: 600px) {
+
             .hero {
                 padding: 35px 10px 18px;
             }
@@ -352,12 +369,12 @@
 
 <body>
 
-    <!-- پس‌زمینه امواج رادیویی -->
+    <!-- پس‌زمینه -->
     <div class="radio-waves-bg">
         <div class="wave-line"></div>
     </div>
 
-    <!-- هدر -->
+    <!-- بخش اصلی -->
     <section class="hero">
 
         <div class="antenna-container">
@@ -366,33 +383,44 @@
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
 
-            <!-- آیکون آنتن -->
-            <svg class="antenna-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <svg
+                class="antenna-icon"
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+            >
                 <defs>
-                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                        id="goldGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                    >
                         <stop offset="0%" stop-color="#d97706"/>
                         <stop offset="50%" stop-color="#f59e0b"/>
                         <stop offset="100%" stop-color="#fef08a"/>
                     </linearGradient>
                 </defs>
 
-                <path d="M31 5h2v28h-2z" />
-                <path d="M27 31h10v4H27z" />
-                <path d="M30 34h4v22h-4z" />
-                <path d="M20 57h24v3H20z" />
+                <path d="M31 5h2v28h-2z"/>
+                <path d="M27 31h10v4H27z"/>
+                <path d="M30 34h4v22h-4z"/>
+                <path d="M20 57h24v3H20z"/>
 
-                <path d="M16 15c-4 4-6 9-6 15s2 11 6 15l3-3c-3-3-4-7-4-12s1-9 4-12z" />
-                <path d="M48 15l-3 3c3 3 4 7 4 12s-1 9-4 12l3 3c4-4 6-9 6-15s-2-11-6-15z" />
+                <path d="M16 15c-4 4-6 9-6 15s2 11 6 15l3-3c-3-3-4-7-4-12s1-9 4-12z"/>
+                <path d="M48 15l-3 3c3 3 4 7 4 12s-1 9-4 12l3 3c4-4 6-9 6-15s-2-11-6-15z"/>
 
-                <path d="M9 8C3 14 0 22 0 30s3 16 9 22l3-3c-5-5-7-12-7-19s2-14 7-19z" />
-                <path d="M55 8l-3 3c5 5 7 12 7 19s-2 14-7 19l3 3c6-6 9-14 9-22s-3-16-9-22z" />
+                <path d="M9 8C3 14 0 22 0 30s3 16 9 22l3-3c-5-5-7-12-7-19s2-14 7-19z"/>
+                <path d="M55 8l-3 3c5 5 7 12 7 19s-2 14-7 19l3 3c6-6 9-14 9-22s-3-16-9-22z"/>
             </svg>
 
         </div>
 
         <h1>میلاد یوسفی</h1>
 
-        <h2>مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</h2>
+        <h2>
+            مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی
+        </h2>
 
         <div class="badges">
             <span class="badge gold-badge">Motorola</span>
@@ -403,7 +431,7 @@
 
     </section>
 
-    <!-- محتوای اصلی -->
+    <!-- محتوای سایت -->
     <main class="container">
 
         <section class="card">
@@ -477,7 +505,10 @@
 
         <div class="cta-wrapper">
 
-            <a class="btn-call" href="tel:09048818508">
+            <a
+                class="btn-call"
+                href="tel:09048818508"
+            >
                 📞 تماس با مهندس یوسفی
             </a>
 
@@ -494,6 +525,7 @@
 
     <!-- فوتر -->
     <footer>
+
         <p>
             © تمامی حقوق محفوظ است.
         </p>
@@ -501,6 +533,7 @@
         <p style="margin-top: 5px;">
             میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی
         </p>
+
     </footer>
 
 </body>
