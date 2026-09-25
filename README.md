@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- کد تایید اختصاصی گوگل سرچ کنسول شما -->
-    <meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
+<meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
 
     <title>میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</title>
     <meta name="description" content="میلاد یوسفی - مهندس راه‌اندازی بیسیم موتورولا، شبکه‌های رادیویی و سایت‌های تکرارکننده در قائمشهر، مازندران و سراسر ایران. همکاری با شرکت امیدان صنعت.">
