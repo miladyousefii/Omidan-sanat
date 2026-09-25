@@ -2,15 +2,17 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- کد تایید اختصاصی گوگل سرچ کنسول شما -->
-<meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- کد تایید اختصاصی Google Search Console -->
+    <meta name="google-site-verification" content="dGUUkB_gNbh0UmdzlG26A-icTRoczYw6CFBjdpbC48I" />
 
     <title>میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</title>
+
     <meta name="description" content="میلاد یوسفی - مهندس راه‌اندازی بیسیم موتورولا، شبکه‌های رادیویی و سایت‌های تکرارکننده در قائمشهر، مازندران و سراسر ایران. همکاری با شرکت امیدان صنعت.">
+
     <meta name="keywords" content="مهندس بیسیم, راه اندازی بیسیم, مهندس راه اندازی بیسیم, راه اندازی بیسیم موتورولا, راه اندازی سایت بیسیم, شرکت امیدان صنعت, بیسیم مازندران, بیسیم قائمشهر, 09048818508">
-    
+
     <!-- فونت وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 
@@ -32,7 +34,6 @@
             box-sizing: border-box;
         }
 
-        /* جلوگیری قطعی از اسکرول افقی در موبایل */
         html, body {
             width: 100%;
             max-width: 100%;
@@ -45,7 +46,7 @@
             min-height: 100vh;
         }
 
-        /* --- پس‌زمینه زنده امواج رادیویی --- */
+        /* --- پس‌زمینه امواج رادیویی --- */
         .radio-waves-bg {
             position: fixed;
             top: 0;
@@ -76,9 +77,20 @@
         }
 
         @keyframes wavePulse {
-            0% { transform: scale(0.95); opacity: 0.3; }
-            50% { transform: scale(1.05); opacity: 0.7; }
-            100% { transform: scale(0.95); opacity: 0.3; }
+            0% {
+                transform: scale(0.95);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(0.95);
+                opacity: 0.3;
+            }
         }
 
         /* --- هیرو / بالای سایت --- */
@@ -104,7 +116,9 @@
             background: rgba(15, 23, 42, 0.8);
             border-radius: 50%;
             border: 3px solid var(--gold-primary);
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.3), inset 0 0 15px rgba(59, 130, 246, 0.4);
+            box-shadow:
+                0 0 30px rgba(245, 158, 11, 0.3),
+                inset 0 0 15px rgba(59, 130, 246, 0.4);
         }
 
         .pulse-ring {
@@ -116,14 +130,35 @@
             pointer-events: none;
         }
 
-        .pulse-ring:nth-child(1) { animation-delay: 0s; }
-        .pulse-ring:nth-child(2) { animation-delay: 1s; }
-        .pulse-ring:nth-child(3) { animation-delay: 2s; }
+        .pulse-ring:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .pulse-ring:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .pulse-ring:nth-child(3) {
+            animation-delay: 2s;
+        }
 
         @keyframes ringExpand {
-            0% { width: 120px; height: 120px; opacity: 0.8; border-color: var(--gold-primary); }
-            50% { border-color: var(--blue-glow); }
-            100% { width: 220px; height: 220px; opacity: 0; }
+            0% {
+                width: 120px;
+                height: 120px;
+                opacity: 0.8;
+                border-color: var(--gold-primary);
+            }
+
+            50% {
+                border-color: var(--blue-glow);
+            }
+
+            100% {
+                width: 220px;
+                height: 220px;
+                opacity: 0;
+            }
         }
 
         .antenna-icon {
@@ -278,18 +313,43 @@
             word-wrap: break-word;
         }
 
-        /* بهینه‌سازی مخصوص موبایل */
+        /* --- بهینه‌سازی موبایل --- */
         @media (max-width: 600px) {
-            .hero { padding: 35px 10px 18px; }
-            .hero h1 { font-size: 1.6rem; }
-            .hero h2 { font-size: 0.95rem; }
-            .card { padding: 18px 14px; border-radius: 14px; }
-            .card-title { font-size: 1.08rem; }
-            .btn-call { font-size: 0.92rem; padding: 12px 16px; width: 100%; }
-            .badge { font-size: 0.78rem; padding: 5px 10px; }
+            .hero {
+                padding: 35px 10px 18px;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero h2 {
+                font-size: 0.95rem;
+            }
+
+            .card {
+                padding: 18px 14px;
+                border-radius: 14px;
+            }
+
+            .card-title {
+                font-size: 1.08rem;
+            }
+
+            .btn-call {
+                font-size: 0.92rem;
+                padding: 12px 16px;
+                width: 100%;
+            }
+
+            .badge {
+                font-size: 0.78rem;
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- پس‌زمینه امواج رادیویی -->
@@ -297,100 +357,150 @@
         <div class="wave-line"></div>
     </div>
 
-    <!-- بخش هیرو -->
-    <header class="hero">
+    <!-- هدر -->
+    <section class="hero">
+
         <div class="antenna-container">
+
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
-            
-            <svg class="antenna-icon" viewBox="0 0 24 24">
+
+            <!-- آیکون آنتن -->
+            <svg class="antenna-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#f59e0b" />
-                        <stop offset="100%" stop-color="#fef08a" />
+                        <stop offset="0%" stop-color="#d97706"/>
+                        <stop offset="50%" stop-color="#f59e0b"/>
+                        <stop offset="100%" stop-color="#fef08a"/>
                     </linearGradient>
                 </defs>
-                <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.18 19.58 10.54 20 12 20s2.82-.42 4.34-1.09l1.9 1.9c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-1.38-1.79C19.26 16.07 20 14.12 20 12c0-4.97-4.03-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.52-.49 2.93-1.32 4.08l-2.09-2.09C15.82 13.38 16 12.71 16 12c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 .71.18 1.38.41 1.99l-2.09 2.09C5.49 14.93 5 13.52 5 12c0-3.87 3.13-7 7-7zm0 6c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+
+                <path d="M31 5h2v28h-2z" />
+                <path d="M27 31h10v4H27z" />
+                <path d="M30 34h4v22h-4z" />
+                <path d="M20 57h24v3H20z" />
+
+                <path d="M16 15c-4 4-6 9-6 15s2 11 6 15l3-3c-3-3-4-7-4-12s1-9 4-12z" />
+                <path d="M48 15l-3 3c3 3 4 7 4 12s-1 9-4 12l3 3c4-4 6-9 6-15s-2-11-6-15z" />
+
+                <path d="M9 8C3 14 0 22 0 30s3 16 9 22l3-3c-5-5-7-12-7-19s2-14 7-19z" />
+                <path d="M55 8l-3 3c5 5 7 12 7 19s-2 14-7 19l3 3c6-6 9-14 9-22s-3-16-9-22z" />
             </svg>
+
         </div>
 
         <h1>میلاد یوسفی</h1>
+
         <h2>مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</h2>
 
         <div class="badges">
-            <span class="badge gold-badge">🤝 همکاری با شرکت امیدان صنعت</span>
-            <span class="badge">📻 راه‌اندازی بیسیم موتورولا</span>
-            <span class="badge">📍 قائمشهر | مازندران | سراسر ایران</span>
+            <span class="badge gold-badge">Motorola</span>
+            <span class="badge">VHF / UHF</span>
+            <span class="badge">DMR</span>
+            <span class="badge">Radio Network</span>
         </div>
-    </header>
 
-    <!-- کانتینر اصلی -->
+    </section>
+
+    <!-- محتوای اصلی -->
     <main class="container">
 
-        <!-- درباره من -->
         <section class="card">
-            <h3 class="card-title">👨‍💻 درباره من | بیوگرافی حرفه‌ای</h3>
+
+            <h3 class="card-title">
+                📡 تخصص و فعالیت
+            </h3>
+
             <p>
-                اینجانب <strong>میلاد یوسفی</strong>، مهندس راه‌اندازی بیسیم و متخصص طراحی، کانفیگ، نصب و راه‌اندازی شبکه‌های ارتباطی رادیویی با سال‌ها تجربه در پروژه‌های صنعتی، سازمانی و زیرساختی هستم. افتخار همکاری با <strong>شرکت امیدان صنعت</strong> را داشته و آماده ارائه خدمات تخصصی در استان مازندران (قائمشهر، ساری، بابل، آمل، چالوس و...) و تمامی استان‌های کشور می‌باشم.
+                طراحی، راه‌اندازی، تنظیم و پشتیبانی شبکه‌های بیسیم و رادیویی
+                حرفه‌ای با تمرکز بر سیستم‌های Motorola و شبکه‌های VHF، UHF و DMR.
             </p>
+
         </section>
 
-        <!-- خدمات تخصصی -->
         <section class="card">
-            <h3 class="card-title">🛠 خدمات تخصصی (Services)</h3>
+
+            <h3 class="card-title">
+                🛠 خدمات تخصصی
+            </h3>
+
             <div class="services-grid">
+
                 <div class="service-box">
-                    <h4>📡 راه‌اندازی بیسیم و شبکه‌های رادیویی</h4>
-                    <p>مشاوره، طراحی، جانمایی و اجرای کامل شبکه‌های ارتباطی بیسیم دستی، خودرویی و ثابت.</p>
+                    <h4>راه‌اندازی بیسیم</h4>
+                    <p>
+                        نصب، برنامه‌ریزی و تنظیم بیسیم‌های حرفه‌ای و خودرویی.
+                    </p>
                 </div>
+
                 <div class="service-box">
-                    <h4>📻 راه‌اندازی بیسیم موتورولا (Motorola)</h4>
-                    <p>کانفیگ، برنامه‌ریزی (Programming)، فرکانس‌دهی و عیب‌یابی تخصصی تجهیزات برند موتورولا.</p>
+                    <h4>شبکه‌های رادیویی</h4>
+                    <p>
+                        طراحی و راه‌اندازی شبکه‌های رادیویی و سایت‌های تکرارکننده.
+                    </p>
                 </div>
+
                 <div class="service-box">
-                    <h4>🏗 راه‌اندازی سایت و دکل‌های ارتباطی</h4>
-                    <p>نصب تکرارکننده (Repeater)، دکل‌های ارتباطی، آنتن‌های دیجیتال/آنالوگ و تجهیز کامل سایت‌های رادیویی.</p>
+                    <h4>Motorola</h4>
+                    <p>
+                        تنظیم و راه‌اندازی تجهیزات و سیستم‌های رادیویی موتورولا.
+                    </p>
                 </div>
+
                 <div class="service-box">
-                    <h4>🔍 تست پوشش و بهینه‌سازی سیگنال</h4>
-                    <p>تست سیگنالینگ، عیب‌یابی خطوط انتقال، آنتن‌ها، کابل‌ها و رفع تداخلات فرکانسی.</p>
+                    <h4>VHF / UHF / DMR</h4>
+                    <p>
+                        طراحی لینک‌ها، تنظیم فرکانس‌ها و بهینه‌سازی پوشش رادیویی.
+                    </p>
                 </div>
+
             </div>
+
         </section>
 
-        <!-- همکاری سازمانی -->
         <section class="card">
-            <h3 class="card-title">🏢 همکاری‌های سازمانی</h3>
+
+            <h3 class="card-title">
+                📍 محدوده فعالیت
+            </h3>
+
             <p>
-                🤝 <strong>همکاری با شرکت امیدان صنعت:</strong> ارائه خدمات تخصصی مهندسی، طراحی، تامین، نصب و راه‌اندازی شبکه‌های بیسیم پروژه‌های صنعتی و ارگان‌ها با همکاری شرکت امیدان صنعت.
+                قائمشهر، مازندران و سراسر ایران
             </p>
+
+            <p style="margin-top: 10px;">
+                همکاری با شرکت امیدان صنعت
+            </p>
+
         </section>
 
-        <!-- مناطق تحت پوشش -->
-        <section class="card">
-            <h3 class="card-title">📍 مناطق تحت پوشش خدمات</h3>
-            <p>
-                🏡 <strong>استان مازندران:</strong> قائمشهر (پایگاه اصلی)، ساری، بابل، آمل، بهشهر، بابلسر، تنکابن، چالوس، نوشهر، رامسر و كافة شهرهای استان.<br>
-                🇮🇷 <strong>سراسر ایران:</strong> اجرا و راه‌اندازی پروژه‌های رادیویی در تمامی استان‌ها و مناطق صنعتی کشور.
-            </p>
-        </section>
-
-        <!-- دکمه تماس -->
         <div class="cta-wrapper">
-            <a href="tel:09048818508" class="btn-call">
-                <span>📞 تماس و مشاوره مستقیم: 09048818508</span>
+
+            <a class="btn-call" href="tel:09048818508">
+                📞 تماس با مهندس یوسفی
             </a>
+
+        </div>
+
+        <div class="seo-keywords">
+            مهندس بیسیم، راه‌اندازی بیسیم، مهندس راه‌اندازی بیسیم،
+            راه‌اندازی بیسیم موتورولا، راه‌اندازی سایت بیسیم،
+            شبکه رادیویی، VHF، UHF، DMR، بیسیم مازندران،
+            بیسیم قائمشهر
         </div>
 
     </main>
 
     <!-- فوتر -->
     <footer>
-        <p>© تمامی حقوق محفوظ است | میلاد یوسفی - مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی</p>
-        <div class="seo-keywords">
-            مهندس بیسیم | راه اندازی بیسیم | مهندس راه اندازی بیسیم | راه اندازی بیسیم موتورولا | راه اندازی سایت بیسیم | بیسیم موتورولا مازندران | راه اندازی بیسیم قائمشهر | شرکت امیدان صنعت | تعمیرات بیسیم موتورولا | متخصص شبکه‌های رادیویی
-        </div>
+        <p>
+            © تمامی حقوق محفوظ است.
+        </p>
+
+        <p style="margin-top: 5px;">
+            میلاد یوسفی | مهندس راه‌اندازی بیسیم و شبکه‌های رادیویی
+        </p>
     </footer>
 
 </body>
